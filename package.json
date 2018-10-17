@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "npm run prod",
-    "dev": "concurrently \"webpack -d -w\" \"nodemon --exec babel-node src/server/server.js\"",
-    "prod": "webpack -p && babel-node src/server/server.js",
+    "dev": "concurrently \"webpack -d -w\" \"nodemon --exec babel-node server.js\"",
+    "prod": "webpack -p && babel-node server.js",
     "build": "webpack -p"
   },
   "babel": {
