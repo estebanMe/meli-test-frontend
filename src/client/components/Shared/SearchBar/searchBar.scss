@@ -1,0 +1,21 @@
+@import '../../../styles/variables';
+@import '~bootstrap/scss/mixins/breakpoints';
+
+$search-bar-padding: 0.65em;
+
+.container-fluid.search-container {
+  background-color: $color-primary;
+  padding-top: $search-bar-padding;
+  padding-bottom: $search-bar-padding;
+
+  img {
+    zoom: 0.6;
+  }
+
+  @include media-breakpoint-down(md) {
+    .logo {
+      padding-bottom: $small-space;
+    }
+  }
+}
+

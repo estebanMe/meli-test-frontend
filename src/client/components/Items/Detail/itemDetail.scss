@@ -1,0 +1,94 @@
+@import '../../../styles/variables';
+@import '~bootstrap/scss/mixins/breakpoints';
+
+.picture.image-container {
+  @include media-breakpoint-down(sm) {
+    height: $picture-size/1.75;
+    width: $picture-size/1.75;
+  }
+  @include media-breakpoint-up(md) {
+    height: $picture-size/1.375;
+    width: $picture-size/1.375;
+  }
+  @include media-breakpoint-up(lg) {
+    height: $picture-size;
+    width: $picture-size;
+  }
+  @include media-breakpoint-only(xl) {
+    margin: $small-space !important;
+  }
+}
+
+.info {
+  padding: $small-space $large-space $large-space;
+  @include media-breakpoint-up(xl) {
+    padding: $large-space 0 0;
+  }
+  color: $black;
+
+  .condition {
+    font-size: $font-sm;
+    @include media-breakpoint-up(sm) {
+      padding-bottom: $small-space;
+    }
+  }
+
+  .title {
+    font-size: $font-lg;
+    font-weight: $bold;
+    padding-right: $large-space;
+    @include media-breakpoint-up(md) {
+      padding-bottom: $small-space;
+    }
+  }
+
+  .price {
+
+    padding-bottom: $large-space;
+    @include media-breakpoint-down(md) {
+      padding-bottom: $small-space;
+    }
+
+    .amount {
+      font-size: $font-xl;
+    }
+    .decimals {
+      font-size: $font-lg;
+      position: relative;
+      bottom: 16px;
+    }
+    .shipping {
+      padding-left: 8px;
+    }
+  }
+
+  .button-container {
+    @include media-breakpoint-up(xl) {
+      padding-right: $large-space;
+    }
+  }
+}
+
+.description {
+  $title-size: 28px;
+  $content-size: 16px;
+  padding-left: $large-space;
+  
+  @include media-breakpoint-down(lg) {
+    padding-right: $large-space;
+  }
+
+  .title {
+    font-size: $title-size;
+    color: $black;
+    padding-bottom: $large-space;
+  }
+
+  .content {
+    font-size: $content-size;
+    color: $gray;
+    padding-bottom: $large-space;
+    white-space: pre-line;
+    line-height: normal;
+  }
+}

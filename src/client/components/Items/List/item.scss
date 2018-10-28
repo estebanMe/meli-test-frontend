@@ -1,0 +1,56 @@
+@import '../../../styles/variables';
+@import '~bootstrap/scss/mixins/breakpoints';
+
+.item {
+  $separator-distance: 2%;
+  &:after {
+    content: '';
+    position: absolute;
+    left: $separator-distance;
+    width: 100% - $separator-distance*2;
+    height: 1px;
+    background-color: $light-gray;
+  }
+
+  .thumbnail.image-container {
+    padding: $small-space;
+    height: $thumbnail-size + $small-space*2;
+    width: $thumbnail-size + $small-space*2;
+    border-radius: $thumbnail-radius;
+  }
+
+  .price {
+
+    @include media-breakpoint-up(sm) {
+      padding: $large-space 0;
+    }
+
+    .amount {
+      font-size: $font-lg;
+    }
+    .decimals {
+      font-size: $font-sm;
+      position: relative;
+      bottom: 6px;
+    }
+    .shipping {
+      position: relative;
+      top: 2px;
+      padding-left: 8px;
+      img {
+        zoom: 0.5;
+      }
+     }
+  }
+
+  .address {
+    font-size: $font-xs;
+    color: $dark-gray;
+    @include media-breakpoint-up(sm) {
+      padding-top: $large-space*2;
+    }
+    @include media-breakpoint-only(xs) {
+      padding-bottom: $small-space;
+    }
+  }
+}

@@ -1,6 +1,8 @@
-Test Front-End para MercadoLibre
+##### Test Front-End para MercadoLibre #####
 
-Para iniciar:
+Nombre y Apellido: Esteban Mercado
+
+Para poder visualizar la aplicación:
 
 1. Correr en consola en la raíz del directorio:
 

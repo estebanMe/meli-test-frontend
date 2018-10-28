@@ -1,0 +1,27 @@
+@import '../../../styles/variables';
+
+.categories-container {
+    padding-top: $small-space;
+    padding-bottom: $small-space;
+    font-size: 14px;
+  }
+
+.breadcrumb .breadcrumb-item:last-child {
+    font-weight: bold;
+}
+
+.breadcrumb-item +.breadcrumb-item::before {
+    padding-right: .5rem;
+    padding-left: .5rem;
+    color: #868e96;
+    content: "/";
+}
+
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: "> ";
+}  
+
+.breadcrumb li {
+    display: inline-block !important;
+  }

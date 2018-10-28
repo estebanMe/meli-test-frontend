@@ -4,8 +4,7 @@ import errorAccessAPI from '../errors/errorSearch';
 
 export default function(req, res) {
     //// Mock Query
-    const query = { q: 'auto' }
-    const queryString = query.q || '';
+    const queryString = req.query.q || '';
     request(`https://api.mercadolibre.com/sites/MLA/search?q=${queryString}`, function(error, response, body) {
 
         if (!error) {
@@ -18,6 +17,7 @@ export default function(req, res) {
                 }
 
                 let items = data.results.slice(0, 4);
+             
                 items = items.map((item) => {
                     const amount = Math.floor(item.price);
                     const decimals = +(item.price % 1).toFixed(2).substring(2);
